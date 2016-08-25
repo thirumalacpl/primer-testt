@@ -1,0 +1,1270 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>nativeDroid II - jQueryMobile Template</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css" /> -->
+    <link rel="stylesheet" href="css/font-awesome.min.4.3.0.css" />
+    <link rel="stylesheet" href="css/jquery.mobile.min.1.4.5.css" />
+		<link rel="stylesheet" href="css/waves.min.css" />
+		<link rel="stylesheet" href="css/animate.css" />
+		<link rel="stylesheet" href="css/nativedroid2.css" />
+
+		<meta name="mobile-web-app-capable" content="yes">
+	 	<meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <script src="js/jquery.min.2.1.4.js"></script>
+    <script src="js/jquery-ui.min.1.11.4.js"></script>
+    <script src="js/jquery.mobile.min.1.4.5.js"></script>
+
+<script>$.noConflict();</script>
+<!--flip-->
+
+<link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css-card/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css-card/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css-card/component.css" />
+    <script src="js-card/modernizr.custom.js"></script>
+
+<!--flip-->
+
+<!--scroll effect-->
+
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:300,400,700" />
+  <link rel="stylesheet" type="text/css" href="jquery.pagepiling.css" />
+  <link rel="stylesheet" type="text/css" href="examples-scroll/examples.css" />
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+  <script type="text/javascript" src="jquery.pagepiling.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+
+      /*
+      * Plugin intialization
+      */
+        $('#pagepiling').pagepiling({
+          menu: '#menu',
+          anchors: ['page1', 'page2', 'page3', 'page4'],
+          sectionsColor: ['white', '#ee005a', '#2C3E50', '#39C'],
+          navigation: {
+            'position': 'right',
+            'tooltips': ['Page 1', 'Page 2', 'Page 3', 'Page 4']
+          },
+          afterRender: function(){
+            $('#pp-nav').addClass('custom');
+          },
+          afterLoad: function(anchorLink, index){
+            if(index>1){
+              $('#pp-nav').removeClass('custom');
+            }else{
+              $('#pp-nav').addClass('custom');
+            }
+          }
+      });
+
+
+      /*
+        * Internal use of the demo website
+        */
+        $('#showExamples').click(function(e){
+        e.stopPropagation();
+        e.preventDefault();
+        $('#examplesList').toggle();
+      });
+
+      $('html').click(function(){
+        $('#examplesList').hide();
+      });
+      });
+    </script>
+
+
+<!--scroll effect-->
+ <style>
+    /* Section 1
+   * --------------------------------------- */
+  #section1 h1{
+    color: #444;
+  }
+  #section1 p{
+    color: #333;
+    color: rgba(0,0,0,0.3);
+  }
+  #section1 img{
+    margin: 20px 0;
+    opacity: 0.7;
+  }
+
+  /* Section 2
+   * --------------------------------------- */
+  #section2 h1,
+  #section2 p{
+    z-index: 3;
+  }
+  #section2 p{
+    opacity: 0.8;
+  }
+
+  #section2 #colors{
+    right: 60px;
+    bottom: 0;
+    position: absolute;
+    height: 413px;
+    width: 258px;
+    background-image: url(imgs/colors.gif);
+    background-repeat: no-repeat;
+  }
+
+  /* Section 3
+   * --------------------------------------- */
+  #section3 #colors{
+    left: 60px;
+    bottom: 0;
+  }
+  #section3 p{
+    color: #757575;
+  }
+
+  #colors2,
+  #colors3{
+    position: absolute;
+    height: 163px;
+    width: 362px;
+    z-index: 1;
+    background-repeat: no-repeat;
+    left: 0;
+    margin: 0 auto;
+    right: 0;
+  }
+  #colors2{
+  /*background-image: url(examples-scroll/imgs/colors2.gif);*/
+  background-color: white !important;
+  top:0;
+  }
+  #colors3{
+    /*background-image: url(examples-scroll/imgs/colors3.gif);*/
+    background-color: white !important;
+    bottom:0;
+  }
+
+  /* Section 4
+   * --------------------------------------- */
+  #section4 p{
+    opacity: 0.6;
+  }
+
+  /* Overwriting fullPage.js tooltip color
+  * --------------------------------------- */
+  #pp-nav.custom .pp-tooltip{
+    color: #AAA;
+  }
+  #markup{
+    display: block;
+    width: 450px;
+    margin: 20px auto;
+    text-align: left;
+  }
+
+
+#pp-nav.right {
+    right: 17px;
+    display: none !important;
+}
+</style>
+
+
+
+<!--Scroll Effect-->
+
+	<style type="text/css">
+
+.ui-page-theme-a .ui-header {
+    background-color: #566d7a !important;
+    color: #ffffff;
+}
+
+
+/*.hed1{
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0) !important;
+    height: 55px !important;
+    padding-top: 73px;
+    color: white !important;
+	}*/
+
+.hed1 {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0) !important;
+    height: 0px !important;
+    padding-top: 65px;
+    color: white !important;
+    padding-bottom: 65px;
+}
+.bgc1{
+	background-color: #27c6d9!important; 
+}
+
+/*.hed2{
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0) !important;
+    height: 55px !important;
+    padding-top: 73px;
+    color: white !important;
+	}
+*/
+
+.hed2 {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0) !important;
+    height: 0px !important;
+    padding-top: 65px;
+    color: white !important;
+    padding-bottom: 65px;
+}
+.bgc2{
+	background-color: #4db5ab!important; 
+}
+
+/*.hed3{
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0) !important;
+    height: 55px !important;
+    padding-top: 73px;
+    color: white !important;
+	}
+*/
+
+.hed3 {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0) !important;
+    height: 0px !important;
+    padding-top: 65px;
+    color: white !important;
+    padding-bottom: 65px;
+}
+.bgc3{
+	background-color: #82c586!important; 
+}
+
+/*.hed4{
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0) !important;
+    height: 55px !important;
+    padding-top: 73px;
+    color: white !important;
+	}*/
+
+.hed4 {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0) !important;
+    height: 0px !important;
+    padding-top: 65px;
+    color: white !important;
+    padding-bottom: 65px;
+}
+.bgc4{
+	background-color: #afd680!important; 
+}
+
+.day{
+
+	 float: right !important;
+    font-size: 12px !important;
+    font-weight: 400 !important;
+}
+.nd2-card {
+
+    background-color: white;
+}
+.bgchange{
+		background-color: #b0d484 !important;
+	}
+.bgchange2{
+    background-color: #4cb6aa !important;
+  }
+
+  .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {
+    background-color: rgba(255, 255, 255, 0) !important;
+    border-color: rgba(0,0,0,.87);
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.ui-panel-open {
+    max-width: 100%;
+    width: 270px !important;
+}
+
+.ui-panel.ui-panel-position-bottom.ui-body-inherit.ui-panel-open {
+    min-height: 75px;
+    width: 100% !important;
+}
+
+.ui-content .ui-listview, .ui-panel-inner>.ui-listview {
+    margin: 0em !important;
+}
+
+
+.ui-header > .ui-btn {
+    background-color: transparent !important;
+    color: #ffffff !important;
+    font-size: 20px;
+    line-height: 1.8em !important;
+    padding: 0.5em;
+    display: inline-block;
+    width: 1.6em !important;
+    height: 2.6em !important;
+    border-radius: 50% !important;
+    overflow: hidden !important;
+}
+
+</style>
+	</head>
+
+	<body>
+<!--page one start -->
+		<div data-role="page" id="pageonee">
+		<!-- /*<script type="text/javascript" src="js/pageone.js"></script>*/ -->
+
+			<nd2-include data-src="examples/fragments/panel.left.html"></nd2-include>
+
+			<div data-role="panel" id="bottomsheet" data-animate="false" data-position='bottom' data-display="overlay">
+				<nd2-include data-src="examples/fragments/bottom.sheet.html"></nd2-include>
+			</div>
+    <!--  <div data-role="header" data-position="fixed" class="wow fadeInDown head_tvo" data-wow-delay="0.2s"> -->
+  <!--       <a href="#bottomsheet" class="ui-btn ui-btn-right wow fadeIn" data-wow-delay='1.2s'><i class="zmdi zmdi-more-vert"></i></a> -->
+ <!--        <a href="#overlayPanelbinprolist" class="ui-btn ui-btn-left wow fadeIn head_tvo_line head_height_tvo" data-wow-delay='0.8s'><i class="zmdi zmdi-menu"></i></a>
+        <h1 class="wow fadeIn head_tvo_line head_height_tvo head_tvo_line_1" data-wow-delay='0.4s' style="text-align:center;">ALL LEASONS</h1>
+      </div> -->
+
+			<div data-role="header" data-position="fixed" class="wow fadeInDown head_tvo" data-wow-delay="0.2s">
+				<a href="#overlayPanelbinprolist" class="ui-btn ui-btn-left wow fadeIn head_tvo_line head_height_tvo" data-wow-delay='0.8s'><i class="zmdi zmdi-menu"></i></a>
+				<h1 style="text-align:center;" class="wow fadeIn head_tvo_line head_height_tvo head_tvo_line_1" data-wow-delay='0.4s'>ALL LEASONS</h1>
+        <a href="#bottomsheet" class="ui-btn ui-btn-right wow fadeIn" data-wow-delay='1.2s'><i class="zmdi zmdi-more-vert"></i></a>
+			</div>
+
+
+<div data-role="panel" id="overlayPanelbinprolist" data-display="push" data-position="left" data-dismissible="false" data-swipe-close="false"> 
+
+  <div class='nd2-sidepanel-profile wow fadeInDown'>
+          <img class='profile-background' src="images/slide/slide-bg.png"  alt="slide"/>
+          <div class="row">
+            <div class='col-xs-12 center-xs'>
+              <div class='box box1'>
+                <img class="profile-thumbnail" src="images/slide/profile.png"  alt="slide" />
+             </div>
+            </div>
+             </div>
+              <div class="row" style="margin-top:5px">
+            <div class='col-xs-12 center-xs'>
+              <div class='box profile-text box1'>
+                  <strong id="userlistin"></strong>
+                <!-- <span class='subline' id="city_name_inprolist">Super Power User</span> -->
+              
+          </div>
+        </div>
+        </div>
+
+            </div>
+
+<ul data-role="listview" data-inset="true">
+      
+      <li id="dashin"><a href="#" class="ui-btn ui-icon-carat-r ui-btn-icon-right "><span class="ww">Dashboard</span></a></li>
+    <!--   <li id="inprogressin"><a href="#" class="ui-btn ui-icon-carat-r ui-btn-icon-right "><span class="ww">New Verification</span></a></li> -->
+      <li id="verifiedin"><a href="#" class="ui-btn ui-icon-carat-r ui-btn-icon-right "  ><span class="ww">Awaiting State Head Approval</span></a></li>
+      <li id="completedin"><a href="#" class="ui-btn ui-icon-carat-r ui-btn-icon-right " ><span class="ww">Verified-True</span></a></li>
+      <li id="not_verifiedin"><a href="#" class="ui-btn ui-icon-carat-r ui-btn-icon-right " ><span class="ww"> Verified-False</span></a></li>
+      
+       <li><a href="#" id="signoutin" class="ui-btn sio a_mar">
+      <span class="ww si">Sign Out <img src="images/signout.png" alt="" class="img_sign"></span></a></li>
+
+</ul>
+    <!--<a href="#" id="inprosign" class="ui-btn sio ui-icon-power ui-btn-icon-right">
+      <span class="ww si">Sign Out</span></a>-->
+</div> 
+
+
+	<div data-role="main" class="ui-content bgc1" style="padding: 0em !important;">
+   
+    <div class="ui-grid-solo ">
+      <div class="ui-block-a">
+        <a  href="#pagesecond" class="ui-btn ui-corner-all ui-shadow hed1 bgc1">ADVERTISING</a>
+      
+      </div>
+    </div>
+  </div>
+
+
+   <div data-role="main" class="ui-content bgc2" style="padding: 0em !important;">
+   
+    <div class="ui-grid-solo ">
+      <div class="ui-block-a">
+        <a  href="#" class="ui-btn ui-corner-all ui-shadow hed2 bgc2">CONTENT</a>
+      
+      </div>
+    </div>
+  </div>
+
+
+   <div data-role="main" class="ui-content bgc3" style="padding: 0em !important;">
+   
+    <div class="ui-grid-solo ">
+      <div class="ui-block-a">
+        <a  href="#" class="ui-btn ui-corner-all ui-shadow hed3 bgc3">MEASUREMENT</a>
+      
+      </div>
+    </div>
+  </div>
+
+  <div data-role="main" class="ui-content bgc4" style="padding: 0em !important;">
+   
+    <div class="ui-grid-solo ">
+      <div class="ui-block-a">
+        <a  href="#" class="ui-btn ui-corner-all ui-shadow hed4 bgc4">STRATEGY</a>
+      
+      </div>
+    </div>
+  </div>
+
+
+
+
+</div>
+
+</div>
+<!--page one end-->
+
+
+
+<!--second page start -->
+
+		<div data-role="page" id="pagesecond">
+
+			<nd2-include data-src="examples/fragments/panel.left.html"></nd2-include>
+
+			<div data-role="panel" id="bottomsheet" data-animate="false" data-position='bottom' data-display="overlay">
+				<nd2-include data-src="examples/fragments/bottom.sheet.html"></nd2-include>
+			</div>
+     <div data-role="header" data-position="fixed" class="wow fadeInDown head_tvo" data-wow-delay="0.2s">
+  <!--       <a href="#bottomsheet" class="ui-btn ui-btn-right wow fadeIn" data-wow-delay='1.2s'><i class="zmdi zmdi-more-vert"></i></a> -->
+        <a href="#overlayPanelbinprolista" class="ui-btn ui-btn-left wow fadeIn head_tvo_line head_height_tvo" data-wow-delay='0.8s'><i class="zmdi zmdi-menu"></i></a>
+        <h1 class="wow fadeIn head_tvo_line head_height_tvo head_tvo_line_1" data-wow-delay='0.4s' style="text-align:center;">CHEAT SHEET</h1>
+      </div>
+
+
+<div data-role="panel" id="overlayPanelbinprolista" data-display="push" data-position="left" data-dismissible="false" data-swipe-close="false"> 
+
+  <div class='nd2-sidepanel-profile wow fadeInDown'>
+          <img class='profile-background' src="images/slide/slide-bg.png"  alt="slide"/>
+          <div class="row">
+            <div class='col-xs-12 center-xs'>
+              <div class='box box1'>
+                <img class="profile-thumbnail" src="images/slide/profile.png"  alt="slide" />
+             </div>
+            </div>
+             </div>
+              <div class="row" style="margin-top:5px">
+            <div class='col-xs-12 center-xs'>
+              <div class='box profile-text box1'>
+                  <strong id="userlistin"></strong>
+                <!-- <span class='subline' id="city_name_inprolist">Super Power User</span> -->
+              
+          </div>
+        </div>
+        </div>
+
+            </div>
+
+<ul data-role="listview" data-inset="true">
+      
+      <li id="dashin"><a href="#" class="ui-btn ui-icon-carat-r ui-btn-icon-right "><span class="ww">Dashboard</span></a></li>
+    <!--   <li id="inprogressin"><a href="#" class="ui-btn ui-icon-carat-r ui-btn-icon-right "><span class="ww">New Verification</span></a></li> -->
+      <li id="verifiedin"><a href="#" class="ui-btn ui-icon-carat-r ui-btn-icon-right "  ><span class="ww">Awaiting State Head Approval</span></a></li>
+      <li id="completedin"><a href="#" class="ui-btn ui-icon-carat-r ui-btn-icon-right " ><span class="ww">Verified-True</span></a></li>
+      <li id="not_verifiedin"><a href="#" class="ui-btn ui-icon-carat-r ui-btn-icon-right " ><span class="ww"> Verified-False</span></a></li>
+      
+       <li><a href="#" id="signoutin" class="ui-btn sio a_mar">
+      <span class="ww si">Sign Out <img src="images/signout.png" alt="" class="img_sign"></span></a></li>
+
+</ul>
+    <!--<a href="#" id="inprosign" class="ui-btn sio ui-icon-power ui-btn-icon-right">
+      <span class="ww si">Sign Out</span></a>-->
+</div> 
+
+			<div role="main" class="ui-content wow fadeIn" data-inset="false" data-wow-delay="0.2s">
+					<ul data-role="listview" data-icon="false">
+				<li data-role="list-divider">
+					Friends
+				</li>
+				<li>
+					<a href="#pagethree">
+						<img src="img/list-1.png" />
+						<h2>Ethel Chancy <span class="day">1h Ago</span></h2>
+						<p>ehtel.chancy@example.com</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="img/list-2.png" />
+						<h2>Lorean Gainer <span class="day">2w Ago</span></h2>
+						<p>lorean87@mail.com</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="img/list-3.png""/>
+						<h2>Juliet Gieseke <span class="day">2d Ago</span></h2>
+						<p>flowerpower69@rainbow.com</p>
+					</a>
+				</li>
+					<li>
+					<a href="#">
+						<img src="img/list-4.png""/>
+						<h2>Juliet Gieseke <span class="day">2m Ago</span></h2>
+						<p>flowerpower69@rainbow.com</p>
+					</a>
+				</li>
+			</ul>
+			</div>
+
+		</div>
+
+<!--second page end-->
+
+
+
+<!--Third page start-->
+
+	<div data-role="page" id="pagethree" style="background-color: #b0d484 !important;">
+
+			<nd2-include data-src="examples/fragments/panel.left.html"></nd2-include>
+
+			<div data-role="panel" id="bottomsheet" data-animate="false" data-position='bottom' data-display="overlay">
+				<nd2-include data-src="examples/fragments/bottom.sheet.html"></nd2-include>
+			</div>
+     <div  style="background-color: #b0d484 !important;color: #ffffff;
+    box-shadow: 0 2px 2px 0 rgba(255, 255, 255, 0),0 3px 1px -2px rgba(255, 255, 255, 0),0 1px 5px 0 rgba(0, 0, 0, 0) !important;" data-role="header" data-position="fixed" class="wow fadeInDown head_tvo"  data-wow-delay="0.2s">
+  <!--       <a href="#bottomsheet" class="ui-btn ui-btn-right wow fadeIn" data-wow-delay='1.2s'><i class="zmdi zmdi-more-vert"></i></a> -->
+        <a href="#overlayPanelbinprolista" class="ui-btn ui-btn-left wow fadeIn head_tvo_line head_height_tvo" data-wow-delay='0.8s'><i class="zmdi zmdi-menu"></i></a>
+        <h1 class="wow fadeIn head_tvo_line head_height_tvo head_tvo_line_1" data-wow-delay='0.4s' style="text-align:center;">CHEAT SHEET</h1>
+      </div>
+
+
+<div data-role="panel" id="overlayPanelbinprolista" data-display="push" data-position="left" data-dismissible="false" data-swipe-close="false"> 
+
+  <div class='nd2-sidepanel-profile wow fadeInDown'>
+          <img class='profile-background' src="images/slide/slide-bg.png"  alt="slide"/>
+          <div class="row">
+            <div class='col-xs-12 center-xs'>
+              <div class='box box1'>
+                <img class="profile-thumbnail" src="images/slide/profile.png"  alt="slide" />
+             </div>
+            </div>
+             </div>
+              <div class="row" style="margin-top:5px">
+            <div class='col-xs-12 center-xs'>
+              <div class='box profile-text box1'>
+                  <strong id="userlistin"></strong>
+                <!-- <span class='subline' id="city_name_inprolist">Super Power User</span> -->
+              
+          </div>
+        </div>
+        </div>
+
+            </div>
+
+<ul data-role="listview" data-inset="true">
+      
+      <li id="dashin"><a href="#" class="ui-btn ui-icon-carat-r ui-btn-icon-right "><span class="ww">Dashboard</span></a></li>
+    <!--   <li id="inprogressin"><a href="#" class="ui-btn ui-icon-carat-r ui-btn-icon-right "><span class="ww">New Verification</span></a></li> -->
+      <li id="verifiedin"><a href="#" class="ui-btn ui-icon-carat-r ui-btn-icon-right "  ><span class="ww">Awaiting State Head Approval</span></a></li>
+      <li id="completedin"><a href="#" class="ui-btn ui-icon-carat-r ui-btn-icon-right " ><span class="ww">Verified-True</span></a></li>
+      <li id="not_verifiedin"><a href="#" class="ui-btn ui-icon-carat-r ui-btn-icon-right " ><span class="ww"> Verified-False</span></a></li>
+      
+       <li><a href="#" id="signoutin" class="ui-btn sio a_mar">
+      <span class="ww si">Sign Out <img src="images/signout.png" alt="" class="img_sign"></span></a></li>
+
+</ul>
+    <!--<a href="#" id="inprosign" class="ui-btn sio ui-icon-power ui-btn-icon-right">
+      <span class="ww si">Sign Out</span></a>-->
+</div> 
+
+	<!-- 		<div role="main" class="ui-content wow fadeIn" data-inset="false" data-wow-delay="0.2s">
+					<div class="nd2-card">
+					<div class="card-media">
+						<img src="img/examples/card_bg_1.jpg" style="width: 100%;">
+					</div>
+
+					<div class="card-supporting-text">
+						Cards are a convenient means of displaying content composed of different elements. They're also well-suited for showcasing elements whose size or supported actions vary, like photos with captions of variable length.
+					</div>
+					<div style="width:100%;padding-bottom: 30px;">
+						<div style="width:37%;float: left;padding-left: 13px;"><span class="zmdi zmdi-alarm zmd-fw">3min</span></div>
+						<div style="width:50%;float: left;text-align: right;"> <span>2 activity</span></div>
+					</div>
+			</div>
+
+		</div> -->
+
+
+			<div role="main" class="ui-content wow fadeIn bgchange " data-inset="false" data-wow-delay="0.2s">
+       <ul data-role="listview" data-icon="false">
+       <li > 
+       <a href="#pagefourth">
+       <div  class="nd2-card ">
+					<!-- <div class="card-media">
+						<img src="img/check.png" style="width: 20%;">
+					</div> -->
+                      <div style="width: 100%;text-align: center;">
+                      <img src="img/check.png" style="width: 20%;padding-top: 10px;">
+                      </div>
+                      <div style="text-align: center;color: #b1d084;font-size: 20px;font-weight: 500;">
+                      <p>STRATEGY</p>
+                      </div>
+					<div class="card-supporting-text">
+						<div style="font-size: 20px;text-align: center;letter-spacing: 2px;">Build Brand Loyalty <br>with Utility Marketing</div>
+						<br>
+						<div style="text-align: center;color: gray;font-size: 13px;">Primary Team</div>
+					</div>
+					<div style="width:100%;padding-bottom: 30px;">
+						<div style="width:37%;float: left;padding-left: 13px;color: gray;"><span class="zmdi zmdi-alarm zmd-fw"></span><span style="font-size: 12px;">3min</span></div>
+						<div style="width:50%;float: left;text-align: right;color: gray;font-size: 12px;"> <span>2 activity</span></div>
+					</div>
+			</div>
+      </a>
+      </li>
+      </ul>
+
+		</div>
+
+
+
+
+		</div>
+
+
+
+<!--Third page end-->
+
+<!--fourth page start-->
+
+
+		<div data-role="page" id="pagefourth">
+
+			<nd2-include data-src="examples/fragments/panel.left.html"></nd2-include>
+
+			<div data-role="panel" id="bottomsheet" data-animate="false" data-position='bottom' data-display="overlay">
+				<nd2-include data-src="examples/fragments/bottom.sheet.html"></nd2-include>
+			</div>
+     <div data-role="header" data-position="fixed" class="wow fadeInDown head_tvo" data-wow-delay="0.2s">
+
+        <a href="#overlayPanelbinprolista" class="ui-btn ui-btn-left wow fadeIn head_tvo_line head_height_tvo" data-wow-delay='0.8s'><i class="zmdi zmdi-menu"></i></a>
+        <h1 class="wow fadeIn head_tvo_line head_height_tvo head_tvo_line_1" data-wow-delay='0.4s' style="text-align:center;line-height: 1em !important;">FEATURED LESSONS
+        <br>
+     <small style="font-size: 10px;">This Week</small>
+        </h1>
+
+      </div>
+
+
+<div data-role="panel" id="overlayPanelbinprolista" data-display="push" data-position="left" data-dismissible="false" data-swipe-close="false"> 
+
+  <div class='nd2-sidepanel-profile wow fadeInDown'>
+          <img class='profile-background' src="images/slide/slide-bg.png"  alt="slide"/>
+          <div class="row">
+            <div class='col-xs-12 center-xs'>
+              <div class='box box1'>
+                <img class="profile-thumbnail" src="images/slide/profile.png"  alt="slide" />
+             </div>
+            </div>
+             </div>
+              <div class="row" style="margin-top:5px">
+            <div class='col-xs-12 center-xs'>
+              <div class='box profile-text box1'>
+                  <strong id="userlistin"></strong>
+                <!-- <span class='subline' id="city_name_inprolist">Super Power User</span> -->
+              
+          </div>
+        </div>
+        </div>
+
+            </div>
+
+<ul data-role="listview" data-inset="true">
+      
+      <li id="dashin"><a href="#" class="ui-btn ui-icon-carat-r ui-btn-icon-right "><span class="ww">Dashboard</span></a></li>
+    <!--   <li id="inprogressin"><a href="#" class="ui-btn ui-icon-carat-r ui-btn-icon-right "><span class="ww">New Verification</span></a></li> -->
+      <li id="verifiedin"><a href="#" class="ui-btn ui-icon-carat-r ui-btn-icon-right "  ><span class="ww">Awaiting State Head Approval</span></a></li>
+      <li id="completedin"><a href="#" class="ui-btn ui-icon-carat-r ui-btn-icon-right " ><span class="ww">Verified-True</span></a></li>
+      <li id="not_verifiedin"><a href="#" class="ui-btn ui-icon-carat-r ui-btn-icon-right " ><span class="ww"> Verified-False</span></a></li>
+      
+       <li><a href="#" id="signoutin" class="ui-btn sio a_mar">
+      <span class="ww si">Sign Out <img src="images/signout.png" alt="" class="img_sign"></span></a></li>
+
+</ul>
+    <!--<a href="#" id="inprosign" class="ui-btn sio ui-icon-power ui-btn-icon-right">
+      <span class="ww si">Sign Out</span></a>-->
+</div> 
+
+
+
+
+<div id="pagepiling">
+<div role="main"  id="section1" data-transition="slideup" class="ui-content wow fadeIn section" data-inset="false" data-wow-delay="0.2s" style="padding: 5px;min-height: 435px;    background-color: white;">
+<div style="background-color: #4cb6aa;padding: 0em;">
+<div style="text-align: center;"><img src="img/computer.png" style="padding: 10px;"></div>
+</div>
+<div style="font-size:12px;text-align: center;color: #4cb6aa;padding-top: 30%;" >CONTENT</div>
+<br>
+<div style="font-size: 20px;
+    text-align: center;
+    color: #32444c;">Picture This : Website Images Worth a Thousand Words</div>
+<br>
+<div style="width:100%;float: left;color: gray;text-align: center;"><span class="zmdi zmdi-alarm zmd-fw"></span>
+<span style="font-size: 12px;">5 min - Primer Team</span>
+</div>
+
+<div style="text-align: left;padding-top: 80px;padding-left: 15px;font-size: 13px;color: gray;">
+<span class="zmdi zmdi-file-text zmd-fw"></span><span>Cheat sheet locked</span>
+</div>
+
+ <a href="#seven1"><button>page seven1</button></a>
+
+</div>
+
+<div role="main"  id="section2" data-transition="slideup" class="ui-content wow fadeIn section" data-inset="false" data-wow-delay="0.2s" style="padding: 5px;min-height: 435px;    background-color: white !important;">
+<div style="background-color: #4cb6aa;padding: 0em;">
+<div style="text-align: center;"><img src="img/computer.png" style="padding: 10px;"></div>
+</div>
+<div style="font-size:12px;text-align: center;color: #4cb6aa;padding-top: 30%;" >CONTENT</div>
+<br>
+<div style="font-size: 20px;
+    text-align: center;
+    color: #32444c;">Picture This : Website Images Worth a Thousand Words</div>
+<br>
+<div style="width:100%;float: left;color: gray;text-align: center;"><span class="zmdi zmdi-alarm zmd-fw"></span>
+<span style="font-size: 12px;">5 min - Primer Team</span>
+</div>
+
+<div style="text-align: left;padding-top: 80px;padding-left: 15px;font-size: 13px;color: gray;">
+<span class="zmdi zmdi-file-text zmd-fw"></span><span>Cheat sheet locked</span>
+</div>
+
+
+</div>
+ 
+
+ <div role="main"   id="section3" data-transition="slideup" class="ui-content wow fadeIn section" data-inset="false" data-wow-delay="0.2s" style=" padding: 5px;
+    min-height: 435px;
+    background-color: white !important;
+    z-index: 1;
+    transform: translate3d(0px, 0px, 0px);">
+  <div style="background-color: #b0d484;padding: 0em;">
+  <div style="text-align: center;"><img src="img/mobile.png" style="padding: 3px;"></div>
+  </div>
+ <div style="font-size:12px;
+    text-align: center;
+    color: #4cb6aa;padding-top: 30%;" >CONTENT</div>
+<br>
+  <div style="font-size: 20px;
+    text-align: center;
+    color: #32444c;">Picture This : Website Images Worth a Thousand Words</div>
+<br>
+<div style="width:100%;float: left;color: gray;text-align: center;"><span class="zmdi zmdi-alarm zmd-fw"></span>
+<span style="font-size: 12px;">5 min - Primer Team</span>
+</div>
+
+ <div style="text-align: left;padding-top: 80px;padding-left: 15px;font-size: 13px;color: gray;">
+    <span class="zmdi zmdi-file-text zmd-fw"></span><span>Cheat sheet locked</span>
+  </div>
+
+
+ <a  href="#"
+              class="ui-btn
+              ui-btn-inline
+              ui-btn-fab
+              ui-btn-fab-bottom
+              ui-btn-raised
+              clr-primary"
+
+              data-role="toast"
+              data-toast-message="Mic on"
+              data-toast-action-title="Abort"
+              data-toast-action-link="toasts.html"
+              data-toast-action-color="yellow">
+                <i class='zmdi zmdi-chevron-right zmd-fw'></i>
+        </a>
+
+</div> 
+
+  </div>
+
+
+
+
+
+
+
+ <!--<div id="pagepiling">
+      <div class="section" id="section1">
+        <h1>pagePiling.js</h1>
+      <p>Create an original scrolling site</p>
+      <img src="examples-scroll/imgs/pagePiling-plugin.gif" alt="pagePiling" />
+      <br />
+
+      </div>
+      <div class="section" id="section2">
+        <div class="intro">
+          <div id="colors"></div>
+          <h1>jQuery plugin</h1>
+          <p>Pile your sections one over another and access them scrolling or by URL!</p>
+          <div id="markup">
+            <script src="https://gist.github.com/alvarotrigo/4a87a4b8757d87df8a72.js"></script>
+          </div>
+        </div>
+      </div>
+      <div class="section" id="section3">
+        <div class="intro">
+          <h1>Configurable</h1>
+          <p>Plenty of options, methods and callbacks to use.</p>
+          <div id="colors2"></div>
+          <div id="colors3"></div>
+        </div>
+      </div>
+      <div class="section" id="section4">
+        <div class="intro">
+          <h1>Compatible</h1>
+          <p>Designed to work on tablet and mobile devices.</p>
+          <p>Oh! And its compatible with old browsers such as IE 8 or Opera 12!</p>
+        </div>
+      </div>
+  </div>
+ -->
+
+ 
+    </div>
+
+
+
+<!--fourth page End-->
+
+
+
+<!--five page start-->
+
+  <div data-role="page" id="pagefive" style="    background-color: rgb(76, 182, 170) !important;">
+
+      <nd2-include data-src="examples/fragments/panel.left.html"></nd2-include>
+
+      <div data-role="panel" id="bottomsheet" data-animate="false" data-position='bottom' data-display="overlay">
+        <nd2-include data-src="examples/fragments/bottom.sheet.html"></nd2-include>
+      </div>
+     <div  style="    background-color: rgb(76, 182, 170) !important;
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px !important;" data-role="header" data-position="fixed" class="wow fadeInDown head_tvo"  data-wow-delay="0.2s">
+  <!--       <a href="#bottomsheet" class="ui-btn ui-btn-right wow fadeIn" data-wow-delay='1.2s'><i class="zmdi zmdi-more-vert"></i></a> -->
+        <a href="#overlayPanelbinprolista" class="ui-btn ui-btn-left wow fadeIn head_tvo_line head_height_tvo" data-wow-delay='0.8s'><i class="zmdi zmdi-menu"></i></a>
+        <h1 class="wow fadeIn head_tvo_line head_height_tvo head_tvo_line_1" data-wow-delay='0.4s' style="text-align:center;">CHEAT SHEET</h1>
+      </div>
+
+
+<div  data-role="panel" id="overlayPanelbinprolista" data-display="push" data-position="left" data-dismissible="false" data-swipe-close="false"> 
+
+  <div class='nd2-sidepanel-profile wow fadeInDown'>
+          <img class='profile-background' src="images/slide/slide-bg.png"  alt="slide"/>
+          <div class="row">
+            <div class='col-xs-12 center-xs'>
+              <div class='box box1'>
+                <img class="profile-thumbnail" src="images/slide/profile.png"  alt="slide" />
+             </div>
+            </div>
+             </div>
+              <div class="row" style="margin-top:5px">
+            <div class='col-xs-12 center-xs'>
+              <div class='box profile-text box1'>
+                  <strong id="userlistin"></strong>
+                <!-- <span class='subline' id="city_name_inprolist">Super Power User</span> -->
+              
+          </div>
+        </div>
+        </div>
+
+            </div>
+
+<ul data-role="listview" data-inset="true">
+      
+      <li id="dashin"><a href="#" class="ui-btn ui-icon-carat-r ui-btn-icon-right "><span class="ww">Dashboard</span></a></li>
+    <!--   <li id="inprogressin"><a href="#" class="ui-btn ui-icon-carat-r ui-btn-icon-right "><span class="ww">New Verification</span></a></li> -->
+      <li id="verifiedin"><a href="#" class="ui-btn ui-icon-carat-r ui-btn-icon-right "><span class="ww">Awaiting State Head Approval</span></a></li>
+      <li id="completedin"><a href="#" class="ui-btn ui-icon-carat-r ui-btn-icon-right "><span class="ww">Verified-True</span></a></li>
+      <li id="not_verifiedin"><a href="#" class="ui-btn ui-icon-carat-r ui-btn-icon-right "><span class="ww"> Verified-False</span></a></li>
+      
+       <li><a href="#" id="signoutin" class="ui-btn sio a_mar">
+      <span class="ww si">Sign Out <img src="images/signout.png" alt="" class="img_sign"></span></a></li>
+
+</ul>
+    <!--<a href="#" id="inprosign" class="ui-btn sio ui-icon-power ui-btn-icon-right">
+      <span class="ww si">Sign Out</span></a>-->
+</div> 
+
+ <div role="main" class="ui-content wow fadeIn bgchange2" data-inset="false" data-wow-delay="0.2s">
+          <div class="nd2-card">
+          <!-- <div class="card-media">
+            <img src="img/check.png" style="width: 20%;">
+          </div> -->
+                     
+                     
+          <div class="card-supporting-text">
+            <div style="font-size: 23px;text-align: center;letter-spacing: 2px;line-height: 45px;">jQuery Mobile provides a set of CSS-based column layouts. However, column layouts are not generally recommended on a mobile device, due to the mobile's screen width.</div>
+
+       
+          </div>
+          <div style="font-size: 22px;text-align: left;letter-spacing: 2px;font-weight: 500;line-height: 45px;padding-left: 20px;">How Much?</div>
+       
+      </div>
+ <a  style="background-color: #abd57f;" href="#"
+              class="ui-btn
+              ui-btn-inline
+              ui-btn-fab
+              ui-btn-fab-bottom
+              ui-btn-raised
+              clr-primary"
+
+              data-role="toast"
+              data-toast-message="Mic on"
+              data-toast-action-title="Abort"
+              data-toast-action-link="toasts.html"
+              data-toast-action-color="yellow">
+                <i class='zmdi zmdi-chevron-right zmd-fw'></i>
+</a>
+    </div>
+
+
+
+
+    </div>
+
+
+
+<!--five page end-->
+
+<!--six page start -->
+
+    <div data-role="page" id="pagesix">
+
+      <nd2-include data-src="examples/fragments/panel.left.html"></nd2-include>
+
+      <div data-role="panel" id="bottomsheet" data-animate="false" data-position='bottom' data-display="overlay">
+        <nd2-include data-src="examples/fragments/bottom.sheet.html"></nd2-include>
+      </div>
+<!--      <div  style="background-color: #b0d484 !important;color: #ffffff;
+    box-shadow: 0 2px 2px 0 rgba(255, 255, 255, 0),0 3px 1px -2px rgba(255, 255, 255, 0),0 1px 5px 0 rgba(0, 0, 0, 0) !important;" data-role="header" data-position="fixed" class="wow fadeInDown head_tvo"  data-wow-delay="0.2s">
+
+        <a href="#overlayPanelbinprolista" class="ui-btn ui-btn-left wow fadeIn head_tvo_line head_height_tvo" data-wow-delay='0.8s'><i class="zmdi zmdi-menu"></i></a>
+        <h1 class="wow fadeIn head_tvo_line head_height_tvo head_tvo_line_1" data-wow-delay='0.4s' style="text-align:center;">CHEAT SHEET</h1>
+      </div>
+ -->
+<div style="    background-color: #b0d484 !important;
+    text-align: center;
+    padding: 40px 10px;    color: white;
+    font-size: 20px;
+    font-weight: 400;">CHECKLIST MAKER
+<div style=" text-align: center;
+    padding: 14px;    color: white;
+    font-size: 22px;
+  font-weight: 100;">Clear the list.Swipe Right to add to a "to do" list.Swipre left on what you've already done.</div>
+
+    </div>
+
+    
+<div data-role="panel" id="overlayPanelbinprolista" data-display="push" data-position="left" data-dismissible="false" data-swipe-close="false"> 
+
+  <div class='nd2-sidepanel-profile wow fadeInDown'>
+          <img class='profile-background' src="images/slide/slide-bg.png"  alt="slide"/>
+          <div class="row">
+            <div class='col-xs-12 center-xs'>
+              <div class='box box1'>
+                <img class="profile-thumbnail" src="images/slide/profile.png"  alt="slide" />
+             </div>
+            </div>
+             </div>
+              <div class="row" style="margin-top:5px">
+            <div class='col-xs-12 center-xs'>
+              <div class='box profile-text box1'>
+                  <strong id="userlistin"></strong>
+                <!-- <span class='subline' id="city_name_inprolist">Super Power User</span> -->
+              
+          </div>
+        </div>
+        </div>
+
+            </div>
+
+<ul data-role="listview" data-inset="true">
+      
+      <li id="dashin"><a href="#" class="ui-btn ui-icon-carat-r ui-btn-icon-right "><span class="ww">Dashboard</span></a></li>
+    <!--   <li id="inprogressin"><a href="#" class="ui-btn ui-icon-carat-r ui-btn-icon-right "><span class="ww">New Verification</span></a></li> -->
+      <li id="verifiedin"><a href="#" class="ui-btn ui-icon-carat-r ui-btn-icon-right "  ><span class="ww">Awaiting State Head Approval</span></a></li>
+      <li id="completedin"><a href="#" class="ui-btn ui-icon-carat-r ui-btn-icon-right " ><span class="ww">Verified-True</span></a></li>
+      <li id="not_verifiedin"><a href="#" class="ui-btn ui-icon-carat-r ui-btn-icon-right " ><span class="ww"> Verified-False</span></a></li>
+      
+       <li><a href="#" id="signoutin" class="ui-btn sio a_mar">
+      <span class="ww si">Sign Out <img src="images/signout.png" alt="" class="img_sign"></span></a></li>
+
+</ul>
+    <!--<a href="#" id="inprosign" class="ui-btn sio ui-icon-power ui-btn-icon-right">
+      <span class="ww si">Sign Out</span></a>-->
+</div> 
+
+  <!--    <div role="main" class="ui-content wow fadeIn" data-inset="false" data-wow-delay="0.2s">
+          <div class="nd2-card">
+          <div class="card-media">
+            <img src="img/examples/card_bg_1.jpg" style="width: 100%;">
+          </div>
+
+          <div class="card-supporting-text">
+            Cards are a convenient means of displaying content composed of different elements. They're also well-suited for showcasing elements whose size or supported actions vary, like photos with captions of variable length.
+          </div>
+          <div style="width:100%;padding-bottom: 30px;">
+            <div style="width:37%;float: left;padding-left: 13px;"><span class="zmdi zmdi-alarm zmd-fw">3min</span></div>
+            <div style="width:50%;float: left;text-align: right;"> <span>2 activity</span></div>
+          </div>
+      </div>
+
+    </div> -->
+          <ul data-role="listview" data-icon="false">
+        <li data-role="list-divider">
+          Friends
+        </li>
+        <li>
+          <a href="#">
+            <img src="img/list-1.png" />
+            <h2>Ethel Chancy <span class="day">1h Ago</span></h2>
+            <p>ehtel.chancy@example.com</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="img/list-2.png" />
+            <h2>Lorean Gainer <span class="day">2w Ago</span></h2>
+            <p>lorean87@mail.com</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="img/list-3.png""/>
+            <h2>Juliet Gieseke <span class="day">2d Ago</span></h2>
+            <p>flowerpower69@rainbow.com</p>
+          </a>
+        </li>
+          <li>
+          <a href="#">
+            <img src="img/list-4.png""/>
+            <h2>Juliet Gieseke <span class="day">2m Ago</span></h2>
+            <p>flowerpower69@rainbow.com</p>
+          </a>
+        </li>
+      </ul>
+      </div>
+
+
+
+
+
+    </div>
+
+<!--six page End -->
+
+
+<!--seven page start-->
+  <div data-role="page" id="seven1">
+   <nd2-include data-src="examples/fragments/panel.left.html"></nd2-include>
+
+      <div data-role="panel" id="bottomsheet" data-animate="false" data-position='bottom' data-display="overlay">
+        <nd2-include data-src="examples/fragments/bottom.sheet.html"></nd2-include>
+      </div>
+  
+      <div data-role="header" data-position="fixed" class="wow fadeInDown head_tvo" data-wow-delay="0.2s">
+        <a href="#overlayPanelbinprolist" class="ui-btn ui-btn-left wow fadeIn head_tvo_line head_height_tvo" data-wow-delay='0.8s'><i class="zmdi zmdi-menu"></i></a>
+        <h1 style="text-align:center;" class="wow fadeIn head_tvo_line head_height_tvo head_tvo_line_1" data-wow-delay='0.4s'>ALL LEASONS</h1>
+        <a href="#bottomsheet" class="ui-btn ui-btn-right wow fadeIn" data-wow-delay='1.2s'><i class="zmdi zmdi-more-vert"></i></a>
+      </div>
+
+
+<div data-role="panel" id="overlayPanelbinprolist" data-display="push" data-position="left" data-dismissible="false" data-swipe-close="false"> 
+
+  <div class='nd2-sidepanel-profile wow fadeInDown'>
+          <img class='profile-background' src="images/slide/slide-bg.png"  alt="slide"/>
+          <div class="row">
+            <div class='col-xs-12 center-xs'>
+              <div class='box box1'>
+                <img class="profile-thumbnail" src="images/slide/profile.png"  alt="slide" />
+             </div>
+            </div>
+             </div>
+              <div class="row" style="margin-top:5px">
+            <div class='col-xs-12 center-xs'>
+              <div class='box profile-text box1'>
+                  <strong id="userlistin"></strong>
+                <!-- <span class='subline' id="city_name_inprolist">Super Power User</span> -->
+              
+          </div>
+        </div>
+        </div>
+
+            </div>
+
+<ul data-role="listview" data-inset="true">
+      
+      <li id="dashin"><a href="#" class="ui-btn ui-icon-carat-r ui-btn-icon-right "><span class="ww">Dashboard</span></a></li>
+    <li id="verifiedin"><a href="#" class="ui-btn ui-icon-carat-r ui-btn-icon-right "  ><span class="ww">Awaiting State Head Approval</span></a></li>
+      <li id="completedin"><a href="#" class="ui-btn ui-icon-carat-r ui-btn-icon-right " ><span class="ww">Verified-True</span></a></li>
+      <li id="not_verifiedin"><a href="#" class="ui-btn ui-icon-carat-r ui-btn-icon-right " ><span class="ww"> Verified-False</span></a></li>
+      
+       <li><a href="#" id="signoutin" class="ui-btn sio a_mar">
+      <span class="ww si">Sign Out <img src="images/signout.png" alt="" class="img_sign"></span></a></li>
+
+</ul>
+  
+</div> 
+
+
+ <!-- <div role="main" class="ui-content wow fadeIn bgchange2" data-inset="false" data-wow-delay="0.2s">
+  
+        <ul id="elasticstack" class="elasticstack">
+        <li><img src="img-card/1.jpg" alt="01"/><h5>Saudade</h5></li>
+        <li><img src="img-card/2.jpg" alt="02"/><h5>Tuqburni</h5></li>
+        <li><img src="img-card/3.jpg" alt="03"/><h5>Retrouvailles</h5></li>
+        <li><img src="img-card/4.jpg" alt="04"/><h5>Onsra</h5></li>
+        <li><img src="img-card/5.jpg" alt="05"/><h5>Mamihlapinatapai</h5></li>
+        <li><img src="img-card/6.jpg" alt="06"/><h5>Koi No Yokan</h5></li>
+      </ul>
+ 
+    </div> -->
+
+  <div role="main" class="ui-content wow fadeIn bgchange2 " data-inset="false" data-wow-delay="0.2s">
+       <ul data-role="listview" data-icon="false" id="elasticstack" class="elasticstack">
+       <li style="    background-color: white;"  > 
+       <a href="#">
+      
+         
+                      <div style="width: 100%;text-align: center;">
+                      <img src="img/check.png" style="width: 20%;padding-top: 10px;">
+                      </div>
+                      <div style="text-align: center;color: #b1d084;font-size: 20px;font-weight: 500;">
+                      <p>STRATEGY</p>
+                      </div>
+          <div class="card-supporting-text">
+            <div style="font-size: 20px;text-align: center;letter-spacing: 2px;">1Build Brand Loyalty <br>with Utility Marketing</div>
+            <br>
+            <div style="text-align: center;color: gray;font-size: 13px;">Primary Team</div>
+          </div>
+          <div style="width:100%;padding-bottom: 30px;">
+            <div style="width:37%;float: left;padding-left: 13px;color: gray;"><span class="zmdi zmdi-alarm zmd-fw"></span><span style="font-size: 12px;">3min</span></div>
+            <div style="width:50%;float: left;text-align: right;color: gray;font-size: 12px;"> <span>2 activity</span></div>
+          </div>
+    
+      </a>
+      </li>
+
+
+       <li style="    background-color: white;"  > 
+       <a href="#">
+       
+          
+                      <div style="width: 100%;text-align: center;">
+                      <img src="img/check.png" style="width: 20%;padding-top: 10px;">
+                      </div>
+                      <div style="text-align: center;color: #b1d084;font-size: 20px;font-weight: 500;">
+                      <p>STRATEGY</p>
+                      </div>
+          <div class="card-supporting-text">
+            <div style="font-size: 20px;text-align: center;letter-spacing: 2px;">2Build Brand Loyalty <br>with Utility Marketing</div>
+            <br>
+            <div style="text-align: center;color: gray;font-size: 13px;">Primary Team</div>
+          </div>
+          <div style="width:100%;padding-bottom: 30px;">
+            <div style="width:37%;float: left;padding-left: 13px;color: gray;"><span class="zmdi zmdi-alarm zmd-fw"></span><span style="font-size: 12px;">3min</span></div>
+            <div style="width:50%;float: left;text-align: right;color: gray;font-size: 12px;"> <span>2 activity</span></div>
+          </div>
+     
+      </a>
+      </li>
+
+
+       <li  style="    background-color: white;"  > 
+       <a href="#">
+     
+         
+                      <div style="width: 100%;text-align: center;">
+                      <img src="img/check.png" style="width: 20%;padding-top: 10px;">
+                      </div>
+                      <div style="text-align: center;color: #b1d084;font-size: 20px;font-weight: 500;">
+                      <p>STRATEGY</p>
+                      </div>
+          <div class="card-supporting-text">
+            <div style="font-size: 20px;text-align: center;letter-spacing: 2px;">3Build Brand Loyalty <br>with Utility Marketing</div>
+            <br>
+            <div style="text-align: center;color: gray;font-size: 13px;">Primary Team</div>
+          </div>
+          <div style="width:100%;padding-bottom: 30px;">
+            <div style="width:37%;float: left;padding-left: 13px;color: gray;"><span class="zmdi zmdi-alarm zmd-fw"></span><span style="font-size: 12px;">3min</span></div>
+            <div style="width:50%;float: left;text-align: right;color: gray;font-size: 12px;"> <span>2 activity</span></div>
+          </div>
+     
+      </a>
+      </li>
+
+       <li style="    background-color: white;" > 
+       <a href="#">
+      
+                      <div style="width: 100%;text-align: center;">
+                      <img src="img/check.png" style="width: 20%;padding-top: 10px;">
+                      </div>
+                      <div style="text-align: center;color: #b1d084;font-size: 20px;font-weight: 500;">
+                      <p>STRATEGY</p>
+                      </div>
+          <div class="card-supporting-text">
+            <div style="font-size: 20px;text-align: center;letter-spacing: 2px;">4Build Brand Loyalty <br>with Utility Marketing</div>
+            <br>
+            <div style="text-align: center;color: gray;font-size: 13px;">Primary Team</div>
+          </div>
+          <div style="width:100%;padding-bottom: 30px;">
+            <div style="width:37%;float: left;padding-left: 13px;color: gray;"><span class="zmdi zmdi-alarm zmd-fw"></span><span style="font-size: 12px;">3min</span></div>
+            <div style="width:50%;float: left;text-align: right;color: gray;font-size: 12px;"> <span>2 activity</span></div>
+          </div>
+     
+      </a>
+      </li>
+      </ul>
+
+    </div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+<!--seven page End-->
+
+		<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script> -->
+ 
+		<script src="js/waves.min.js"></script>
+		<script src="js/wow.min.js"></script>
+		<script src="js/nativedroid2.js"></script>
+		<script src="nd2settings.js"></script>
+
+
+
+<!--Flip-->
+  <script src="js-card/draggabilly.pkgd.min.js"></script>
+    <script src="js-card/elastiStack.js"></script>
+    <script>
+      new ElastiStack( document.getElementById( 'elasticstack' ) );
+    </script>
+ 
+
+	</body>
+</html>
